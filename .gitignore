@@ -1,6 +1,9 @@
 tuxedorust/target
 .adm/
-bin
+bin/c_server
+bin/c_upper.o
+bin/rust_server
+bin/std*
 *.o
 logs/
 .idea
