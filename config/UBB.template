@@ -1,0 +1,57 @@
+*RESOURCES
+
+IPCKEY          45050
+
+MASTER          "jasonb"
+
+MODEL           SHM
+
+LDBAL           Y
+
+MAXACCESSERS    100
+
+MAXSERVERS      100
+
+MAXSERVICES     100
+
+*MACHINES
+
+DEFAULT:
+    APPDIR="/home/src/weblogic/tuxedorust/tuxedo/bin"
+    TUXCONFIG="/home/src/weblogic/tuxedorust/tuxedo/config/UBB"
+    TUXDIR="/software/tuxedo/tuxedo12.2.2.0.0"
+    ULOGPFX="/home/src/weblogic/tuxedorust/tuxedo/logs/ULOG"
+
+"jasonb"
+    LMID="jasonb"
+
+*GROUPS
+
+TUXEDO_GRP1
+    GRPNO=100
+    LMID="jasonb"
+
+*SERVERS
+
+DEFAULT:
+    REPLYQ=Y
+    CLOPT="-A"
+    RESTART=Y
+    GRACE=0
+    MAXGEN=10
+
+c_server
+    SRVGRP=TUXEDO_GRP1
+    REPLYQ=N
+    SRVID=1000
+    SEQUENCE=3000
+
+rust_server
+    SRVGRP=TUXEDO_GRP1
+    REPLYQ=N
+    SRVID=2000
+    SEQUENCE=3000
+
+
+
+*SERVICES

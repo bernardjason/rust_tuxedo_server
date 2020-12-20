@@ -1,0 +1,7 @@
+tuxedorust/target
+.adm/
+bin
+*.o
+logs/
+.idea
+Cargo.lock

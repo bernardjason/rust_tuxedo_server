@@ -1,0 +1,13 @@
+[package]
+name = "tuxedorust"
+version = "0.1.0"
+authors = ["bernardcjason@gmail.com <bernardcjason@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "tuxedorust"
+path = "src/lib.rs"
+crate-type = ["staticlib","cdylib"]
+
+[dependencies]
+libc = "0.2"

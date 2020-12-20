@@ -1,0 +1,3 @@
+# name    number   type    flags   comments
+ROOT       101     fml32  -       -  
+MESSAGE    102     string  -       -  
