@@ -4,12 +4,7 @@ mod tests {
     use std::os::raw::c_char;
     use std::ffi::{CStr, CString};
 
-    macro_rules! c_str {
-    ($x:expr) => (CString::new($x).unwrap().as_ptr() as *mut i8;)
-    }
-    macro_rules! c_char_to_rust {
-    ($x:expr) => ( CStr::from_ptr(($x).as_ptr()).to_str().unwrap() ; )
-    }
+    include!("c_macros.rs");
 
     #[test]
     fn xml_works() {

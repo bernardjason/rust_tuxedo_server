@@ -17,7 +17,7 @@ C bindings generated with
 bindgen  tux.h  -o src/bindings.rs -- -I $TUXDIR/include/
 ```
 
-then all the warnings ignored.
+then all the warnings changed to be ignored.
 
 
 To compile
@@ -33,7 +33,7 @@ tmloadcf -y config/UBB.ubb
 tmboot -y
 ```
 
-Then test
+Then test, ud.in calls C version c_upper service and rust rust_upper
 ```
 ud32 -i ud.in
 ud32 -i rust.in
